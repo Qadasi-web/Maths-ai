@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Math AI Assistant</title>
+    <style>
+        :root {
+            --black: #0a0a0c;
+            --indigo: #3f51b5;
+            --deep-indigo: #1a1a2e;
+            --pink: #ff2e7e;
+            --light-pink: #ff7eb3;
+            --text-gray: #d1d1d1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--black);
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--black) 0%, var(--deep-indigo) 100%);
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--pink);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero h1 span {
+            color: var(--pink);
+            text-shadow: 0 0 15px rgba(255, 46, 126, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(63, 81, 181, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--pink);
+            background: rgba(63, 81, 181, 0.1);
+        }
+
+        .card h3 {
+            color: var(--pink);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+        }
+
+        .mission-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .mission-text h2 {
+            font-size: 2.5rem;
+            color: var(--indigo);
+            border-left: 5px solid var(--pink);
+            padding-left: 20px;
+        }
+
+        /* CTA Button */
+        .btn {
+            display: inline-block;
+            background: var(--pink);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 46, 126, 0.4);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 25px rgba(255, 46, 126, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Solve the <span>Unsolvable</span></h1>
+        <p>The next generation of mathematical intelligence, blending the precision of logic with the speed of AI.</p>
+    </section>
+
+    <div class="container">
+        <div class="mission-section">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>We believe that everyone has a "math brain." Sometimes, you just need the right translator. Our AI was built by educators and engineers to turn complex equations into intuitive insights.</p>
+                <p>From Calculus to Linear Algebra, we provide step-by-step logic that doesn't just give you the answer—it teaches you the "why."</p>
+                <a href="#" class="btn">Try the Solver</a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Advanced Logic</h3>
+                <p>Utilizing symbolic reasoning to ensure that every step of your proof is mathematically sound and verifiable.</p>
+            </div>
+            <div class="card">
+                <h3>Indigo Interface</h3>
+                <p>Designed for long study sessions. Our dark, indigo-infused UI reduces eye strain and increases focus.</p>
+            </div>
+            <div class="card">
+                <h3>Instant Visuals</h3>
+                <p>We don't just show numbers. We generate real-time graphs and 3D models to bring your variables to life.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Math AI Assistant. Powered by Indigo & Pink Logic.
+    </footer>
+
+</body>
+</html>

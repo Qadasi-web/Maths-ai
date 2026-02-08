@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+<head>
+    <title>MathOito - Login</title>
+    <style>
+        body{ padding:10px; text-align: center; background: ghostwhite; font-family: Times New Roman; }
+        h1{ font-size: 50px; }
+        .meta-ai-circle {
+            width: 100px; height: 100px; border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, black, #ff99cc, black, #6666ff);
+            box-shadow: 0 0 20px 5px #ff69b4, 0 0 40px 10px pink, 0 0 60px 15px black;
+            margin: auto; margin-top: 50px;
+        }
+        input{ width: 80%; border-radius: 5px; height: 25px; border: none; padding: 5px; margin-bottom: 15px;
+               box-shadow: 0 0 2px 1px #ff69b4, 0 0 4px 1px #365556, 0 0 6px 1px black; }
+        #log{ background: pink; border: none; width: 82%; height: 35px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        #log:hover{ background:#6c0f61; color: white; }
+        #intro{ color: pink; font-weight: bold; }
+        a { text-decoration: none; color: indigo; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="meta-ai-circle"></div>
+    <h1>MathOito</h1>
+    <p id="intro">@Qadasi-Web</p><br>
+    <div id="one">
+        <p style="font-size: 25px; font-weight: bold;">Login</p>
+        <form method="POST" action="{{ url_for('login') }}">
+            <input type="email" name="email" placeholder="Your email..." required><br>
+            <input type="password" name="password" placeholder="Your password..." required><br>
+            <button type="submit" id="log">Login</button>
+            <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+</html>

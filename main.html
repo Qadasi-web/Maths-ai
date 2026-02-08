@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math AI Assistant</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f9; margin: 0; display: flex; height: 100vh; }
+        .sidebar { width: 250px; background-color:#542850; color: white; padding: 20px; display: flex; flex-direction: column; }
+        .topic-list { list-style: none; padding: 0; }
+        .topic-list li { padding: 12px; margin-bottom: 5px; background: pink; border-radius: 6px; cursor: pointer; color: indigo; font-weight: bold; }
+        .topic-list li:hover { background: black; color: white; }
+        .main-container { flex-grow: 1; padding: 30px; display: flex; flex-direction: column; gap: 20px; overflow-y: auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid indigo; }
+        .question-box { background-color:#e9d4e7; }
+        textarea { width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; margin-top: 10px; }
+        button { padding: 10px 20px; background-color: black; color: pink; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .logout-btn { background: #ff69b4; color: white; margin-top: auto; padding: 10px; text-align: center; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Math Topics</h2>
+        <ul class="topic-list">
+            <li>Algebra I</li>
+            <li>Calculus</li>
+            <li>Geometry</li>
+            <li>Statistics</li>
+            <li>Trigonometry</li>
+        </ul>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main-container">
+        <div class="card question-box">
+            <h3>AI Question</h3>
+            <p id="math-question">Welcome, {{ session['user_name'] }}! Click below to start.</p>
+        </div>
+        <button onclick="alert('Generating Question...')">Generate a question</button>
+
+        <div class="card user-input-box">
+            <h3>Your Solution</h3>
+            <textarea placeholder="Write your steps here..."></textarea>
+            <button style="margin-top: 10px;">Submit Solution</button>
+        </div>
+    </div>
+</body>
+</html>
